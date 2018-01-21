@@ -2,7 +2,6 @@
   "name": "system-components",
   "version": "1.0.0",
   "description": "Create consistent design-system-driven React UI components",
-  "module": "src/index",
   "main": "dist/index",
   "scripts": {
     "prepublishOnly": "babel src -d dist",
