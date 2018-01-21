@@ -5,6 +5,11 @@ Create consistent design-system-driven React UI components
 
 Built with [styled-system][sys] & [styled-components][sc]
 
+[![Build Status][build-badge]][build]
+
+[build-badge]: https://img.shields.io/travis/jxnblk/system-components/master.svg?style=flat-square
+[build]: https://travis-ci.org/jxnblk/system-components
+
 ```js
 import system from 'system-components'
 
