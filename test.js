@@ -1,11 +1,16 @@
 import test from 'ava'
 import styled, { css as scCSS, isStyledComponent } from 'styled-components'
-import StyleSheet from 'styled-components/lib/models/StyleSheet'
+import {
+  __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS
+} from 'styled-components'
 import { propTypes } from 'styled-system'
 import React from 'react'
 import { create as render } from 'react-test-renderer'
 import { isDOMComponent, isCompositeComponent } from 'react-dom/test-utils'
 import system from './src'
+
+// 😎
+const { StyleSheet } = __DO_NOT_USE_OR_YOU_WILL_BE_HAUNTED_BY_SPOOKY_GHOSTS
 
 const getCSS = () => StyleSheet.instance.toReactElements()
   .map(el => el.props.dangerouslySetInnerHTML.__html)
