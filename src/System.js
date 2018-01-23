@@ -23,8 +23,8 @@ const getPropKeys = defaultProps => Object.keys(defaultProps || {})
   .filter(key => !!key)
 
 const getFuncs = keys => keys
-  .map(f => typeof f === 'string' ? system[f] : f)
-  .filter(f => typeof f === 'function')
+  .map(f => typeof f === 'string' ? system[f] || f : f)
+  .reduce((a, f) => Array.isArray(f) ? [ ...a, ...f ] : [ ...a, f ], [])
 
 const getPropTypes = keys => keys
   .filter(key => typeof key === 'string')

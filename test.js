@@ -122,9 +122,14 @@ test('accepts theme as a default prop', t => {
   t.regex(css, /color:#0af/)
 })
 
-/*
- * requires expanding nested arrays in funcsOrKeys
-test.todo('works with the styled-component `css` helper', t => {
+test('passes css string arguments', t => {
+  const Box = system('color:cyan;')
+  const json = render(<Box />).toJSON()
+  const css = getCSS()
+  t.regex(css, /color:cyan;/)
+})
+
+test('works with the styled-component `css` helper', t => {
   const Box = system(scCSS`
     color: ${props => props.color};
   `)
@@ -132,4 +137,3 @@ test.todo('works with the styled-component `css` helper', t => {
   const css = getCSS()
   t.regex(css, /color:yellow/)
 })
-*/
