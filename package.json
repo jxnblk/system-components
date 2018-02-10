@@ -21,9 +21,8 @@
   "author": "Brent Jackson",
   "license": "MIT",
   "dependencies": {
-    "styled-components": "^3.1.2",
-    "styled-system": "^1.1.1",
-    "tag-hoc": "^1.0.0"
+    "styled-components": ">=3.0.0",
+    "styled-system": "^1.1.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
